@@ -1082,3 +1082,336 @@ footer p {
 .cityhall-map-link:focus {
   background-color: #6e2f23;
 }
+
+.school-view {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f0f0ff;
+  border: 3px solid #287052;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.school-banner {
+  display: block;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+  border-radius: 6px;
+}
+
+.school-guess {
+  font-weight: bold;
+}
+
+.school-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.school-choice-btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #287052;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.school-choice-btn:hover,
+.school-choice-btn:focus {
+  background-color: #1d503c;
+}
+
+.school-back-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #287052;
+  background-color: transparent;
+  border: 2px solid #287052;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.school-back-btn:hover,
+.school-back-btn:focus {
+  background-color: #e4a630;
+  border-color: #e4a630;
+  color: white;
+}
+
+.school-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.school-map-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #8b3e2f;
+  border-radius: 8px;
+}
+
+.school-map-link:hover,
+.school-map-link:focus {
+  background-color: #6e2f23;
+}
+
+/* Word Fun / Scramble */
+
+.school-level-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.school-blocks-img {
+  max-width: 70px;
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.school-level-form {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+}
+
+.school-level-table {
+  margin: 0 auto 1rem;
+  border-collapse: collapse;
+}
+
+.school-level-table th,
+.school-level-table td {
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+}
+
+.school-scramble-option {
+  text-align: left;
+  max-width: 260px;
+  margin: 0.5rem auto;
+  font-size: 1.05rem;
+}
+
+.school-wordfun-middle {
+  flex: 1;
+  min-width: 260px;
+}
+
+.school-word-display {
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.school-alphabet-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.school-letter-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #287052;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.school-letter-btn:hover,
+.school-letter-btn:focus {
+  background-color: #1d503c;
+}
+
+.school-letter-used {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+}
+
+.school-word-img {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.school-sentence {
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.school-highlight-word {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+.school-help-list {
+  text-align: left;
+  max-width: 520px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+.school-scrambled-word {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+
+.school-guess-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.school-guess-form input[type="text"] {
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  border: 2px solid #287052;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.school-error {
+  color: #cf0000;
+  font-weight: bold;
+}
+
+.school-last-guess {
+  font-style: italic;
+  color: #55604f;
+}
+
+/* Farm Field-Trip */
+
+.school-farm-img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+  border-radius: 6px;
+}
+
+.school-farm-zeek-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.school-farm-zeek-img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.school-inline-link {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #0000ff;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.school-inline-link:hover,
+.school-inline-link:focus {
+  color: #6e2f23;
+}
+
+.school-farm-subnav {
+  margin: 1.5rem 0 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b7d9c4;
+}
+
+.school-farm-subnav-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.school-farm-subnav-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.school-farm-nav-btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #0000ff;
+  background-color: white;
+  border: 2px solid #287052;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.school-farm-nav-btn:hover,
+.school-farm-nav-btn:focus {
+  background-color: #287052;
+  color: white;
+}
+
+.school-farm-mainnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: #eaffea;
+  border: 2px solid #287052;
+  border-radius: 10px;
+}
