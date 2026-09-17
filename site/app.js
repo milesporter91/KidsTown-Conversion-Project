@@ -3,18 +3,13 @@ const locationView = document.querySelector("#location-view");
 const locationTitle = document.querySelector("#location-title");
 const locationMessage = document.querySelector("#location-message");
 const cityparkView = document.querySelector("#citypark-view");
+const museumView = document.querySelector("#museum-view");
 
 const locations = {
   "#/township": {
     title: "Township",
     message:
       "The Township route is connected. Its history and world-location activities are still being converted."
-  },
-
-  "#/museum": {
-    title: "Museum",
-    message:
-      "The Museum route is connected. Its original weather and space activities are still being converted."
   },
 
   "#/zoo": {
@@ -52,6 +47,7 @@ function showHome() {
   homeView.hidden = false;
   locationView.hidden = true;
   cityparkView.hidden = true;
+  museumView.hidden = true;
   document.title = "KidsTown";
 }
 
@@ -59,6 +55,7 @@ function showLocation(location) {
   homeView.hidden = true;
   locationView.hidden = false;
   cityparkView.hidden = true;
+  museumView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
@@ -69,10 +66,23 @@ function showCityPark() {
   homeView.hidden = true;
   locationView.hidden = true;
   cityparkView.hidden = false;
+  museumView.hidden = true;
   document.title = "City Park | KidsTown";
 
   if (window.CityPark) {
     window.CityPark.start();
+  }
+}
+
+function showMuseum() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = true;
+  museumView.hidden = false;
+  document.title = "Museum | KidsTown";
+
+  if (window.Museum) {
+    window.Museum.start();
   }
 }
 
@@ -86,6 +96,11 @@ function handleRoute() {
 
   if (route === "#/city-park") {
     showCityPark();
+    return;
+  }
+
+  if (route === "#/museum") {
+    showMuseum();
     return;
   }
 
