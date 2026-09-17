@@ -4,6 +4,7 @@ const locationTitle = document.querySelector("#location-title");
 const locationMessage = document.querySelector("#location-message");
 const cityparkView = document.querySelector("#citypark-view");
 const museumView = document.querySelector("#museum-view");
+const toystoreView = document.querySelector("#toystore-view");
 
 const locations = {
   "#/township": {
@@ -30,12 +31,6 @@ const locations = {
       "The City Hall route is connected. Its detective activities are still being converted."
   },
 
-  "#/toy-store": {
-    title: "Toy Store",
-    message:
-      "The Toy Store route is connected. Its puzzles and games are still being converted."
-  },
-
   "#/library": {
     title: "Library",
     message:
@@ -48,6 +43,7 @@ function showHome() {
   locationView.hidden = true;
   cityparkView.hidden = true;
   museumView.hidden = true;
+  toystoreView.hidden = true;
   document.title = "KidsTown";
 }
 
@@ -56,6 +52,7 @@ function showLocation(location) {
   locationView.hidden = false;
   cityparkView.hidden = true;
   museumView.hidden = true;
+  toystoreView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
@@ -67,6 +64,7 @@ function showCityPark() {
   locationView.hidden = true;
   cityparkView.hidden = false;
   museumView.hidden = true;
+  toystoreView.hidden = true;
   document.title = "City Park | KidsTown";
 
   if (window.CityPark) {
@@ -79,10 +77,24 @@ function showMuseum() {
   locationView.hidden = true;
   cityparkView.hidden = true;
   museumView.hidden = false;
+  toystoreView.hidden = true;
   document.title = "Museum | KidsTown";
 
   if (window.Museum) {
     window.Museum.start();
+  }
+}
+
+function showToyStore() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = true;
+  museumView.hidden = true;
+  toystoreView.hidden = false;
+  document.title = "Toy Store | KidsTown";
+
+  if (window.ToyStore) {
+    window.ToyStore.start();
   }
 }
 
@@ -101,6 +113,11 @@ function handleRoute() {
 
   if (route === "#/museum") {
     showMuseum();
+    return;
+  }
+
+  if (route === "#/toy-store") {
+    showToyStore();
     return;
   }
 

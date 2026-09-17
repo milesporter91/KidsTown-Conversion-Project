@@ -494,3 +494,186 @@ footer p {
   max-width: 560px;
   margin: 0 auto;
 }
+
+.toystore-view {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #eaffea;
+  border: 3px solid #287052;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.toystore-prompt {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.toystore-poem {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.toystore-guess {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.toystore-answer-img {
+  display: block;
+  max-width: 220px;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.toystore-answer-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.toystore-shape-img {
+  display: block;
+  max-width: 260px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.toystore-shape-answer-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.toystore-bonus-img {
+  display: block;
+  max-width: 320px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.toystore-bonus-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+}
+
+.toystore-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.toystore-choice-btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #287052;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toystore-choice-btn:hover,
+.toystore-choice-btn:focus {
+  background-color: #1d503c;
+}
+
+.toystore-choice-soon {
+  background-color: #7a8c7f;
+}
+
+.toystore-choice-soon:hover,
+.toystore-choice-soon:focus {
+  background-color: #63736a;
+}
+
+.toystore-riddle-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.toystore-riddle-nav-label {
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.toystore-riddle-num-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #287052;
+  background-color: white;
+  border: 2px solid #287052;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toystore-riddle-num-btn:hover,
+.toystore-riddle-num-btn:focus {
+  background-color: #287052;
+  color: white;
+}
+
+.toystore-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.toystore-back-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #287052;
+  background-color: transparent;
+  border: 2px solid #287052;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toystore-back-btn:hover,
+.toystore-back-btn:focus {
+  background-color: #e4a630;
+  border-color: #e4a630;
+  color: white;
+}
+
+.toystore-map-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #8b3e2f;
+  border-radius: 8px;
+}
+
+.toystore-map-link:hover,
+.toystore-map-link:focus {
+  background-color: #6e2f23;
+}
