@@ -5,18 +5,13 @@ const locationMessage = document.querySelector("#location-message");
 const cityparkView = document.querySelector("#citypark-view");
 const museumView = document.querySelector("#museum-view");
 const toystoreView = document.querySelector("#toystore-view");
+const zooView = document.querySelector("#zoo-view");
 
 const locations = {
   "#/township": {
     title: "Township",
     message:
       "The Township route is connected. Its history and world-location activities are still being converted."
-  },
-
-  "#/zoo": {
-    title: "Zoo",
-    message:
-      "The Zoo route is connected. Its animal-region activities are still being converted."
   },
 
   "#/school": {
@@ -44,6 +39,7 @@ function showHome() {
   cityparkView.hidden = true;
   museumView.hidden = true;
   toystoreView.hidden = true;
+  zooView.hidden = true;
   document.title = "KidsTown";
 }
 
@@ -53,6 +49,7 @@ function showLocation(location) {
   cityparkView.hidden = true;
   museumView.hidden = true;
   toystoreView.hidden = true;
+  zooView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
@@ -65,6 +62,7 @@ function showCityPark() {
   cityparkView.hidden = false;
   museumView.hidden = true;
   toystoreView.hidden = true;
+  zooView.hidden = true;
   document.title = "City Park | KidsTown";
 
   if (window.CityPark) {
@@ -78,6 +76,7 @@ function showMuseum() {
   cityparkView.hidden = true;
   museumView.hidden = false;
   toystoreView.hidden = true;
+  zooView.hidden = true;
   document.title = "Museum | KidsTown";
 
   if (window.Museum) {
@@ -91,10 +90,25 @@ function showToyStore() {
   cityparkView.hidden = true;
   museumView.hidden = true;
   toystoreView.hidden = false;
+  zooView.hidden = true;
   document.title = "Toy Store | KidsTown";
 
   if (window.ToyStore) {
     window.ToyStore.start();
+  }
+}
+
+function showZoo() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = true;
+  museumView.hidden = true;
+  toystoreView.hidden = true;
+  zooView.hidden = false;
+  document.title = "Zoo | KidsTown";
+
+  if (window.Zoo) {
+    window.Zoo.start();
   }
 }
 
@@ -118,6 +132,11 @@ function handleRoute() {
 
   if (route === "#/toy-store") {
     showToyStore();
+    return;
+  }
+
+  if (route === "#/zoo") {
+    showZoo();
     return;
   }
 
