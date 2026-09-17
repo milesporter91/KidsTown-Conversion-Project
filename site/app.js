@@ -2,6 +2,7 @@ const homeView = document.querySelector("#home-view");
 const locationView = document.querySelector("#location-view");
 const locationTitle = document.querySelector("#location-title");
 const locationMessage = document.querySelector("#location-message");
+const cityparkView = document.querySelector("#citypark-view");
 
 const locations = {
   "#/township": {
@@ -40,12 +41,6 @@ const locations = {
       "The Toy Store route is connected. Its puzzles and games are still being converted."
   },
 
-  "#/city-park": {
-    title: "City Park",
-    message:
-      "The City Park route is connected. Its original journey pages are still being converted."
-  },
-
   "#/library": {
     title: "Library",
     message:
@@ -56,16 +51,29 @@ const locations = {
 function showHome() {
   homeView.hidden = false;
   locationView.hidden = true;
+  cityparkView.hidden = true;
   document.title = "KidsTown";
 }
 
 function showLocation(location) {
   homeView.hidden = true;
   locationView.hidden = false;
+  cityparkView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
   document.title = `${location.title} | KidsTown`;
+}
+
+function showCityPark() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = false;
+  document.title = "City Park | KidsTown";
+
+  if (window.CityPark) {
+    window.CityPark.start();
+  }
 }
 
 function handleRoute() {
@@ -73,6 +81,11 @@ function handleRoute() {
 
   if (route === "#/home") {
     showHome();
+    return;
+  }
+
+  if (route === "#/city-park") {
+    showCityPark();
     return;
   }
 

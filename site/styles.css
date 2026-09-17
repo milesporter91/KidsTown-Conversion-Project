@@ -108,3 +108,135 @@ footer {
 footer p {
   margin: 0;
 }
+
+.citypark-view {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: left;
+  background-color: #fffaf0;
+  border: 3px solid #287052;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.citypark-view h1 {
+  text-align: center;
+}
+
+.citypark-intro-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.citypark-name-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.citypark-name-form label {
+  font-weight: bold;
+}
+
+.citypark-name-form input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #287052;
+  border-radius: 6px;
+}
+
+.citypark-story {
+  line-height: 1.6;
+  overflow: auto;
+}
+
+.citypark-story p {
+  margin: 0 0 1rem;
+}
+
+.citypark-img {
+  margin: 0.25rem 0.75rem 0.75rem;
+  border-radius: 6px;
+}
+
+.citypark-img-left {
+  float: left;
+  margin-left: 0;
+}
+
+.citypark-img-right {
+  float: right;
+  margin-right: 0;
+}
+
+.citypark-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+  clear: both;
+}
+
+.citypark-choice-btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #287052;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.citypark-choice-btn:hover,
+.citypark-choice-btn:focus {
+  background-color: #1d503c;
+}
+
+.citypark-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  clear: both;
+}
+
+.citypark-back-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #287052;
+  background-color: transparent;
+  border: 2px solid #287052;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.citypark-back-btn:hover,
+.citypark-back-btn:focus {
+  background-color: #e4a630;
+  border-color: #e4a630;
+  color: white;
+}
+
+.citypark-map-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #8b3e2f;
+  border-radius: 8px;
+}
+
+.citypark-map-link:hover,
+.citypark-map-link:focus {
+  background-color: #6e2f23;
+}
