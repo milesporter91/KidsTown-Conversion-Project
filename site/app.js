@@ -6,6 +6,7 @@ const cityparkView = document.querySelector("#citypark-view");
 const museumView = document.querySelector("#museum-view");
 const toystoreView = document.querySelector("#toystore-view");
 const zooView = document.querySelector("#zoo-view");
+const cityhallView = document.querySelector("#cityhall-view");
 
 const locations = {
   "#/township": {
@@ -18,12 +19,6 @@ const locations = {
     title: "School",
     message:
       "The School route is connected. Its word games and learning activities are still being converted."
-  },
-
-  "#/city-hall": {
-    title: "City Hall",
-    message:
-      "The City Hall route is connected. Its detective activities are still being converted."
   },
 
   "#/library": {
@@ -40,6 +35,7 @@ function showHome() {
   museumView.hidden = true;
   toystoreView.hidden = true;
   zooView.hidden = true;
+  cityhallView.hidden = true;
   document.title = "KidsTown";
 }
 
@@ -50,6 +46,7 @@ function showLocation(location) {
   museumView.hidden = true;
   toystoreView.hidden = true;
   zooView.hidden = true;
+  cityhallView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
@@ -63,6 +60,7 @@ function showCityPark() {
   museumView.hidden = true;
   toystoreView.hidden = true;
   zooView.hidden = true;
+  cityhallView.hidden = true;
   document.title = "City Park | KidsTown";
 
   if (window.CityPark) {
@@ -77,6 +75,7 @@ function showMuseum() {
   museumView.hidden = false;
   toystoreView.hidden = true;
   zooView.hidden = true;
+  cityhallView.hidden = true;
   document.title = "Museum | KidsTown";
 
   if (window.Museum) {
@@ -91,6 +90,7 @@ function showToyStore() {
   museumView.hidden = true;
   toystoreView.hidden = false;
   zooView.hidden = true;
+  cityhallView.hidden = true;
   document.title = "Toy Store | KidsTown";
 
   if (window.ToyStore) {
@@ -105,10 +105,26 @@ function showZoo() {
   museumView.hidden = true;
   toystoreView.hidden = true;
   zooView.hidden = false;
+  cityhallView.hidden = true;
   document.title = "Zoo | KidsTown";
 
   if (window.Zoo) {
     window.Zoo.start();
+  }
+}
+
+function showCityHall() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = true;
+  museumView.hidden = true;
+  toystoreView.hidden = true;
+  zooView.hidden = true;
+  cityhallView.hidden = false;
+  document.title = "City Hall | KidsTown";
+
+  if (window.CityHall) {
+    window.CityHall.start();
   }
 }
 
@@ -137,6 +153,11 @@ function handleRoute() {
 
   if (route === "#/zoo") {
     showZoo();
+    return;
+  }
+
+  if (route === "#/city-hall") {
+    showCityHall();
     return;
   }
 

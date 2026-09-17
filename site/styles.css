@@ -935,3 +935,150 @@ footer p {
 .zoo-map-link:focus {
   background-color: #6e2f23;
 }
+
+.cityhall-view {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+  border: 3px solid #287052;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.cityhall-banner {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+  border-radius: 6px;
+}
+
+.cityhall-intro-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+}
+
+.cityhall-guess {
+  font-weight: bold;
+}
+
+.cityhall-good-luck {
+  font-weight: bold;
+  color: #cf0000;
+}
+
+.cityhall-story {
+  text-align: left;
+  line-height: 1.6;
+  overflow: auto;
+}
+
+.cityhall-story-img {
+  float: right;
+  max-width: 220px;
+  width: 45%;
+  height: auto;
+  margin: 0 0 0.75rem 1rem;
+  border-radius: 6px;
+}
+
+.cityhall-diary {
+  clear: both;
+  margin: 1rem 2rem;
+  padding: 0.75rem 1rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f5f2e6;
+  border-left: 4px solid #8b3e2f;
+}
+
+.cityhall-diary p {
+  margin: 0.5rem 0;
+}
+
+.cityhall-diary-signature {
+  font-style: italic;
+}
+
+.cityhall-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+  clear: both;
+}
+
+.cityhall-choice-btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #287052;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cityhall-choice-btn:hover,
+.cityhall-choice-btn:focus {
+  background-color: #1d503c;
+}
+
+.cityhall-note {
+  font-weight: bold;
+  color: #cf0000;
+}
+
+.cityhall-note-added {
+  font-style: italic;
+  color: #55604f;
+  font-size: 0.95rem;
+}
+
+.cityhall-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  clear: both;
+}
+
+.cityhall-back-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #287052;
+  background-color: transparent;
+  border: 2px solid #287052;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cityhall-back-btn:hover,
+.cityhall-back-btn:focus {
+  background-color: #e4a630;
+  border-color: #e4a630;
+  color: white;
+}
+
+.cityhall-map-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #8b3e2f;
+  border-radius: 8px;
+}
+
+.cityhall-map-link:hover,
+.cityhall-map-link:focus {
+  background-color: #6e2f23;
+}
