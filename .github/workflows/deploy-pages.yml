@@ -1,0 +1,101 @@
+name: Validate and deploy KidsTown
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate:
+    name: Validate SPA
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Check required SPA files
+        shell: bash
+        run: |
+          required_files=(
+            "site/index.html"
+            "site/styles.css"
+            "site/app.js"
+            "site/assets/images/hometown.gif"
+          )
+
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+          done
+
+      - name: Check original map routes
+        shell: bash
+        run: |
+          routes=(
+            "township"
+            "museum"
+            "zoo"
+            "school"
+            "city-hall"
+            "toy-store"
+            "city-park"
+            "library"
+          )
+
+          for route in "${routes[@]}"; do
+            if ! grep -Fq "href=\"#/$route\"" site/index.html; then
+              echo "Missing map route: $route"
+              exit 1
+            fi
+          done
+
+          echo "All required SPA files and map routes were found."
+
+  upload:
+    name: Prepare GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./site
+
+  deploy:
+    name: Deploy GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: upload
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v5
