@@ -56,7 +56,4 @@ The live deployment is at:
 
 **https://milesporter91.github.io/KidsTown-Conversion-Project/**
 
-Note: GitHub Pages always serves whatever is currently on `main`. The
-full eight-location conversion described above lives on the
-`convert-kidstown-locations` branch; the deployed site will reflect it
-once that branch is merged into `main`.
+
