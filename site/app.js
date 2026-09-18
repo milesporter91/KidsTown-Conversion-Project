@@ -8,14 +8,9 @@ const toystoreView = document.querySelector("#toystore-view");
 const zooView = document.querySelector("#zoo-view");
 const cityhallView = document.querySelector("#cityhall-view");
 const schoolView = document.querySelector("#school-view");
+const townshipView = document.querySelector("#township-view");
 
 const locations = {
-  "#/township": {
-    title: "Township",
-    message:
-      "The Township route is connected. Its history and world-location activities are still being converted."
-  },
-
   "#/library": {
     title: "Library",
     message:
@@ -32,6 +27,7 @@ function showHome() {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "KidsTown";
 }
 
@@ -44,6 +40,7 @@ function showLocation(location) {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
 
   locationTitle.textContent = location.title;
   locationMessage.textContent = location.message;
@@ -59,6 +56,7 @@ function showCityPark() {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "City Park | KidsTown";
 
   if (window.CityPark) {
@@ -75,6 +73,7 @@ function showMuseum() {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "Museum | KidsTown";
 
   if (window.Museum) {
@@ -91,6 +90,7 @@ function showToyStore() {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "Toy Store | KidsTown";
 
   if (window.ToyStore) {
@@ -107,6 +107,7 @@ function showZoo() {
   zooView.hidden = false;
   cityhallView.hidden = true;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "Zoo | KidsTown";
 
   if (window.Zoo) {
@@ -123,6 +124,7 @@ function showCityHall() {
   zooView.hidden = true;
   cityhallView.hidden = false;
   schoolView.hidden = true;
+  townshipView.hidden = true;
   document.title = "City Hall | KidsTown";
 
   if (window.CityHall) {
@@ -139,10 +141,28 @@ function showSchool() {
   zooView.hidden = true;
   cityhallView.hidden = true;
   schoolView.hidden = false;
+  townshipView.hidden = true;
   document.title = "School | KidsTown";
 
   if (window.School) {
     window.School.start();
+  }
+}
+
+function showTownship() {
+  homeView.hidden = true;
+  locationView.hidden = true;
+  cityparkView.hidden = true;
+  museumView.hidden = true;
+  toystoreView.hidden = true;
+  zooView.hidden = true;
+  cityhallView.hidden = true;
+  schoolView.hidden = true;
+  townshipView.hidden = false;
+  document.title = "Township | KidsTown";
+
+  if (window.Township) {
+    window.Township.start();
   }
 }
 
@@ -181,6 +201,11 @@ function handleRoute() {
 
   if (route === "#/school") {
     showSchool();
+    return;
+  }
+
+  if (route === "#/township") {
+    showTownship();
     return;
   }
 
