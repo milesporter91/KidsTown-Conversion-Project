@@ -63,6 +63,14 @@ jobs:
 
           echo "All required SPA files and map routes were found."
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check routes and assets
+        run: node scripts/check-site.js
+
   upload:
     name: Prepare GitHub Pages
     if: github.event_name != 'pull_request'
