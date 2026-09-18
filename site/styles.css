@@ -1690,3 +1690,287 @@ footer p {
 .township-facts-list li {
   margin-bottom: 0.5rem;
 }
+
+/* Library */
+
+.library-view {
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #eaf3ff;
+  border: 3px solid #1d4e89;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.library-guess {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.library-map-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0.75rem auto;
+  max-width: 100%;
+}
+
+.library-map-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.library-map-wrap area {
+  cursor: pointer;
+}
+
+.library-link-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.library-link-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.library-text-link {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #1d4e89;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.library-text-link:hover,
+.library-text-link:focus {
+  color: #0b2c52;
+}
+
+.library-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b9d3ef;
+}
+
+.library-back-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #1d4e89;
+  background-color: transparent;
+  border: 2px solid #1d4e89;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.library-back-btn:hover,
+.library-back-btn:focus {
+  background-color: #1d4e89;
+  color: white;
+}
+
+.library-map-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #287052;
+  border-radius: 8px;
+}
+
+.library-map-link:hover,
+.library-map-link:focus {
+  background-color: #1d503c;
+}
+
+.library-region-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.library-region-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+/* State information page */
+
+.library-state-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.library-state-map,
+.library-state-flag {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.library-state-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
+  flex: 1 1 200px;
+}
+
+.library-facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  text-align: left;
+  max-width: 640px;
+  margin: 1rem auto;
+}
+
+.library-fact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.library-fact-icon {
+  width: 32px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.library-activity-link-wrap {
+  margin: 1.25rem 0;
+}
+
+.library-activity-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1d4e89;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.library-activity-btn:hover,
+.library-activity-btn:focus {
+  background-color: #123258;
+}
+
+.library-activity-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Activities: word searches, web tales, fill-in quizzes */
+
+.library-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.library-choice-btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1d4e89;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.library-choice-btn:hover,
+.library-choice-btn:focus {
+  background-color: #123258;
+}
+
+.library-wordsearch-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem auto;
+  display: block;
+}
+
+.library-wordsearch-list {
+  text-align: left;
+  max-width: 640px;
+  margin: 0.75rem auto;
+}
+
+.library-wordsearch-list li {
+  margin-bottom: 0.6rem;
+}
+
+.library-tale-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.library-tale-map {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.library-tale-form {
+  text-align: left;
+  max-width: 560px;
+  margin: 1rem auto;
+}
+
+.library-tale-field {
+  margin-bottom: 1.1rem;
+}
+
+.library-tale-label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.library-fillin-correct {
+  font-weight: bold;
+  color: #1d7a3c;
+}
+
+.library-fillin-wrong {
+  font-weight: bold;
+  color: #a83232;
+}
